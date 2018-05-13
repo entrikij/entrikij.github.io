@@ -10,27 +10,17 @@ html{
 #initials{
     //background-color: red;
 
-	width:fit-content;
-	height:fit-content;
-	
-    position: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    margin: auto;
-	text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 100%;
 }
 
 #content{
 	width:fit-content;
 	height:fit-content;
 	
-	margin-left: auto;
-	margin-right: auto;
-	position: relative;
-	transform: translateY(-10%);
 	text-align:center;
 	
 	font-family: 'Anton', sans-serif;
