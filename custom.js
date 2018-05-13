@@ -179,7 +179,7 @@ $( document ).ready(function() {
 	
 	initMoveLines(0, "init");
 	
-	$(document).click(function(){
+	$("#initials").click(function(){
 		$("#initials").animate({'top':'-=35%','opacity':'0'},750);
 		//$("#content").animate({'font-size':'5rem'},750);
 		
