@@ -180,7 +180,15 @@ $( document ).ready(function() {
 	initMoveLines(0, "init");
 	
 	$("#content").click(function(){
-		$("#initials").animate({'margin-top':'-=30%','opacity':'0'},750);
+        var gutter = $("#line-gutter");
+        var offset = gutter.offset();
+        var width = gutter.width();
+        var height = gutter.height();
+
+        var centerX = offset.left + width / 2;
+        var centerY = offset.top + height / 2;
+
+		$("#initials").animate({'height':2*centerY,'opacity':'0'},750);
 		//$("#content").animate({'font-size':'5rem'},750);
 		
 		alterGutter(750);
