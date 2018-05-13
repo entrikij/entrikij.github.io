@@ -108,9 +108,9 @@ function initMoveLines(duration, type){
 		}
 		else if(startingSection == 2){
 			if(endingSection == 1){
-				lineData = [ { "x": startingPoint - height,   "y": height},  
+				lineData = [ { "x": 0,  "y": endingPoint},
 							{ "x": landingZoneLeft + landingLeft,  "y": landingZoneTop + landingTop},
-							{ "x": 0,  "y": endingPoint}];
+                    		{ "x": startingPoint - height,   "y": height}];
 			}
 			else{ //3
 				lineData = [ { "x": startingPoint - height,   "y": height},  
@@ -120,14 +120,14 @@ function initMoveLines(duration, type){
 		}
 		else{ //3
 			if(endingSection == 1){
-				lineData = [ { "x": width,   "y": startingPoint - height - width},  
+				lineData = [ { "x": 0,  "y": endingPoint},
 							{ "x": landingZoneLeft + landingLeft,  "y": landingZoneTop + landingTop},
-							{ "x": 0,  "y": endingPoint}];
+                    		{ "x": width,   "y": startingPoint - height - width}];
 			}
 			else{ //2
-				lineData = [ { "x": width,   "y": startingPoint - height - width},  
+				lineData = [ { "x": endingPoint - height,  "y": height},
 							{ "x": landingZoneLeft + landingLeft,  "y": landingZoneTop + landingTop},
-							{ "x": endingPoint - height,  "y": height}];
+                    		{ "x": width,   "y": startingPoint - height - width}];
 			}
 		}
 		
@@ -135,7 +135,7 @@ function initMoveLines(duration, type){
 							Math.round(lineData[1]['x']) + ',' + Math.round(lineData[1]['y']) + ' ' +
 							Math.round(lineData[2]['x']) + ',' + Math.round(lineData[2]['y']);
 		
-		var color;
+		var color = "#242038";
 					
 		if(i < 2) color = "#242038";
 		else if(i < 4) color = "#9067C6";
