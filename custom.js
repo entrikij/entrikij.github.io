@@ -180,7 +180,7 @@ $( document ).ready(function() {
 	initMoveLines(0, "init");
 	
 	$("#content").click(function(){
-		$("#initials").animate({'top':'-=35%','opacity':'0'},750);
+		$("#initials").animate({'margin-top':'-=30%','opacity':'0'},750);
 		//$("#content").animate({'font-size':'5rem'},750);
 		
 		alterGutter(750);
