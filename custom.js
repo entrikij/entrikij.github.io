@@ -303,6 +303,7 @@ $( document ).ready(function() {
         var centerY = offset.top + height / 2;
 
 		$("#initials").animate({'height':2*centerY,'opacity':'0'},750);
+		$("#page-header").animate({'margin-top':'0','opacity':'1'},750);
 		//$("#content").animate({'font-size':'5rem'},750);
 		
 		alterGutterInitial(750);
