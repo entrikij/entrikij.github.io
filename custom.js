@@ -302,16 +302,16 @@ $( document ).ready(function() {
 		//$("#content").animate({'font-size':'5rem'},750);
 		
 		alterGutterInitial(750);
-		// setTimeout(function(){
-		// 	alterGutter(10000);
-		// 	$("#initials").hide();
-		// }, 750);
-		//
-		// clearInterval(globalInterval);
-		//
-		// globalInterval = setInterval(function(){
-		// 	alterGutter(10000);
-		// }, 10000);
+		setTimeout(function(){
+			alterGutter(10000);
+			$("#initials").hide();
+		}, 750);
+
+		clearInterval(globalInterval);
+
+		globalInterval = setInterval(function(){
+			alterGutter(10000);
+		}, 10000);
 		
 		$("#svg-zone").unbind("click");
 	});
