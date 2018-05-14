@@ -28,11 +28,11 @@ function sendLineDouble(id, lineString1, lineString2, duration) {
     var myPolygon = d3.select(document.getElementById(id));
     myPolygon
         .transition()
-        .ease("quadOut")
+        .ease("linear")
         .duration(duration)
         .attr('points',lineString1)
 		.transition()
-        .ease("quadOut")
+        .ease("cubicOut")
         .duration(duration)
         .attr('points',lineString2);
 }
