@@ -273,6 +273,7 @@ $(window).on('resize', function(){
 		initMoveLines(750, "move");
 	else{
 		alterGutter(750);
+		/*
 		setTimeout(function(){
 			alterGutter(10000);
 		}, 750);
@@ -282,6 +283,7 @@ $(window).on('resize', function(){
 		globalInterval = setInterval(function(){
 			alterGutter(10000);
 		}, 10000);
+		*/
 	}
 });
 
@@ -305,6 +307,8 @@ $( document ).ready(function() {
 		
 		alterGutterInitial(750);
 		$("body").animate({backgroundColor:"#9067C6"}, 750);
+		
+		/*
 		setTimeout(function(){
 			alterGutter(10000);
 			$("#initials").hide();
@@ -315,8 +319,9 @@ $( document ).ready(function() {
 		globalInterval = setInterval(function(){
 			alterGutter(10000);
 		}, 10000);
+		*/
 		
-		$("#svg-zone").unbind("click");
+		$("#content").unbind("click");
 	});
 	
 	
