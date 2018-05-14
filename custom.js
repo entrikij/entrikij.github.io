@@ -19,7 +19,8 @@ function sendLine(id, lineString, duration) {
 	  .transition()
 	  .ease("quadOut")
 	  .duration(duration)
-	  .attr('points',lineString);
+	  .attr('points',lineString)
+	  .style({"stroke":"white"});
 }
 
 function sendLineDouble(id, lineString1, lineString2, duration) {
@@ -34,7 +35,8 @@ function sendLineDouble(id, lineString1, lineString2, duration) {
 		.transition()
         .ease("cubicOut")
         .duration(duration)
-        .attr('points',lineString2);
+        .attr('points',lineString2)
+		.style({"stroke":"white"});
 }
 
 function alterGutterInitial(duration){
@@ -302,6 +304,7 @@ $( document ).ready(function() {
 		//$("#content").animate({'font-size':'5rem'},750);
 		
 		alterGutterInitial(750);
+		$("body").animate({backgroundColor:"#9067C6"}, 750);
 		setTimeout(function(){
 			alterGutter(10000);
 			$("#initials").hide();
