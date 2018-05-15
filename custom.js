@@ -11,7 +11,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
 }
 
-function sendLine(id, lineString, duration) {
+function sendLine(id, lineString, duration, color) {
 	console.log("line");
 
 	var myPolygon = d3.select(document.getElementById(id));
@@ -20,10 +20,10 @@ function sendLine(id, lineString, duration) {
 	  .ease("quadOut")
 	  .duration(duration)
 	  .attr('points',lineString)
-	  .style({"stroke":"white"});
+	  .style({"stroke":color});
 }
 
-function sendLineDouble(id, lineString1, lineString2, duration) {
+function sendLineDouble(id, lineString1, lineString2, duration, color) {
     console.log("line");
 
     var myPolygon = d3.select(document.getElementById(id));
@@ -36,7 +36,7 @@ function sendLineDouble(id, lineString1, lineString2, duration) {
         .ease("cubicOut")
         .duration(duration)
         .attr('points',lineString2)
-		.style({"stroke":"white"});
+		.style({"stroke":color});
 }
 
 function alterGutterInitial(duration){
@@ -59,6 +59,10 @@ function alterGutterInitial(duration){
 
         var lineString1 = "", lineString2 = "";
 
+		startingPoint = lineGutterTop;
+		endingPoint = lineGutterTop;
+		midPoint['y'] = lineGutterTop;
+		
         if(startingSectionArr[i] == 2){
         	if(endingSectionArr[i] == 2){
                 lineString1 = 	Math.round(0) + ',' + Math.round(height) + ' ' +
@@ -103,10 +107,10 @@ function alterGutterInitial(duration){
         var lineId = "line-" + i;
 
 		if(lineString2 == ""){
-            sendLine(lineId, lineString1, duration);
+            sendLine(lineId, lineString1, duration,'white');
             //alert();
 		}else{
-            sendLineDouble(lineId, lineString1, lineString2, Math.round(duration/2.5));
+            sendLineDouble(lineId, lineString1, lineString2, Math.round(duration/2.5), 'white');
 		}
     }
 }
@@ -126,12 +130,16 @@ function alterGutter(duration){
 		var startingPoint = getRandomInt(lineGutterTop, lineGutterTop + lineGutterHeight);
 		var midPoint = {"x": getRandomInt(0, lineGutterWidth), "y":getRandomInt(lineGutterTop, lineGutterTop + lineGutterHeight)};
 		var endingPoint = getRandomInt(lineGutterTop, lineGutterTop + lineGutterHeight);
+		
+		startingPoint = lineGutterTop;
+		endingPoint = lineGutterTop;
+		midPoint['y'] = lineGutterTop;
 
 		var lineString = 	Math.round(0) + ',' + Math.round(startingPoint) + ' ' +
 							Math.round(midPoint['x']) + ',' + Math.round(midPoint['y']) + ' ' +
 							Math.round(lineGutterWidth) + ',' + Math.round(endingPoint);
 
-		sendLine("line-" + i, lineString, duration);
+		sendLine("line-" + i, lineString, duration, 'white');
 	}
 }
 
@@ -263,7 +271,7 @@ function initMoveLines(duration, type){
 										"stroke-width":"3"});
 		}		
 		else if(type == "move"){
-			sendLine("line-" + i, lineString, duration)
+			sendLine("line-" + i, lineString, duration, color)
 		}
 	}				
 }
