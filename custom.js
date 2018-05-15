@@ -322,7 +322,7 @@ $( document ).ready(function() {
 		//$("#content").animate({'font-size':'5rem'},750);
 		
 		alterGutterInitial(750);
-		$("body").animate({backgroundColor:"#9067C6"}, 750);
+		$("#page-header").parent().animate({backgroundColor:"#9067C6"}, 750);
 		
 		/*
 		setTimeout(function(){
