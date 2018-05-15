@@ -59,9 +59,10 @@ function alterGutterInitial(duration){
 
         var lineString1 = "", lineString2 = "";
 
-		startingPoint = lineGutterTop;
-		endingPoint = lineGutterTop;
-		midPoint['y'] = lineGutterTop;
+		//Not random anymore
+		startingPoint = lineGutterTop + 2;
+		endingPoint = lineGutterTop + 2;
+		midPoint['y'] = lineGutterTop + 2;
 		
         if(startingSectionArr[i] == 2){
         	if(endingSectionArr[i] == 2){
@@ -112,6 +113,12 @@ function alterGutterInitial(duration){
 		}else{
             sendLineDouble(lineId, lineString1, lineString2, Math.round(duration/2.5), 'white');
 		}
+		
+		setTimeout(function(){
+			$("#line-gutter").css({'border-top':'4px solid white'});
+			$('polyline').remove();
+			
+		}, duration * 1.3);
     }
 }
 
@@ -280,7 +287,7 @@ $(window).on('resize', function(){
 	if(state == 0)
 		initMoveLines(750, "move");
 	else{
-		alterGutter(750);
+		//alterGutter(750);
 		/*
 		setTimeout(function(){
 			alterGutter(10000);
