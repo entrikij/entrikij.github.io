@@ -21,7 +21,7 @@ h1{
     height:auto;
     width:fit-content;
     position:fixed;
-    left:calc(16% + 260px);
+    left:calc(16% + 20%);
 }
 
 .site-info{

@@ -60,8 +60,11 @@ $('.content-item').click(function(){
 });
 
 $('.overlay').click(function() {
-    $('.content-item-clone').fadeOut(300).remove();
+    $('.content-item-clone').fadeOut(300);
     $(this).fadeOut(300);
     $('body').removeClass('modal-open');
     project_open = false;
+    setTimeout(function(){
+        $('.content-item-clone').remove();
+    }, 300);
 });

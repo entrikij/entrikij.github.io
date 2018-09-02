@@ -58,8 +58,9 @@
     }
     .site-info-container{
         position:fixed;
-        left:calc(8%);
+        left:calc(8%) !important;
     }
+
 }
 
 @media all and (max-width: 991.98px) {
@@ -69,7 +70,9 @@
 }
 
 @media all and (max-width: 1199.98px) {
-
+    .site-info-container{
+        left:calc(16% + 260px);
+    }
 }
 
 
@@ -81,7 +84,7 @@
         left: 5% !important;
     }
 }
-@media all and (min-width: 576px) and (max-width: 767.98px) {
+@media all and (min-width: 615px) and (max-width: 767.98px) {
     .content-item-clone-final{
         width: 86% !important;
         left: 7% !important;
