@@ -37,7 +37,8 @@ h1{
 
 .content-box{
     display:inline-block;
-    width:260px;
+    width:20%;
+    min-width:260px;
     font-size:0;
     margin-bottom:15px;
     height:fit-content;
@@ -45,7 +46,8 @@ h1{
 
 .content-item{
     display:inline-block;
-    width: 230px;
+    width:17.5%;
+    min-width: 230px;
     height:130px;
     margin: 15px 0 0 0;
     background-color:black;
