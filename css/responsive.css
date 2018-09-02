@@ -1,10 +1,10 @@
-@media (max-width: 575.98px) {
+@media only screen and (max-width: 575.98px) {
     #xs-check{
         display:block;
     }
 }
 
-@media (max-width: 614.98px) {
+@media only screen and (max-width: 614.98px) {
     .site-info-container{
         position:relative !important;
         width:100%;
@@ -36,7 +36,7 @@
     }
 }
 
-@media (max-width: 767.98px) {
+@media only screen and (max-width: 767.98px) {
     .content-box{
         position:absolute;
         right:0px;
@@ -47,10 +47,10 @@
     }
 }
 
-@media (max-width: 991.98px) {
+@media only screen and (max-width: 991.98px) {
 
 }
 
-@media (max-width: 1199.98px) {
+@media only screen and (max-width: 1199.98px) {
 
 }
