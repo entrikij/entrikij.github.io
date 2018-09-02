@@ -24,14 +24,14 @@
         transition: none;
         width:100%;
     }
-    
+
     .content-item:hover{
         width:100%;
         height:20vh;
     }
 
     .content-item-clone{
-        height:130px;
+        height:20vh;
     }
 }
 
