@@ -17,6 +17,7 @@
     .content-box{
         position:relative !important;
         width:100%;
+        margin-right:8%;
     }
 
     .content-item{
