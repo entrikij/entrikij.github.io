@@ -15,7 +15,7 @@
 
     .site-info-container{
         position:relative !important;
-        width:100%;
+        width:calc(100% - 16%);
     }
 
     .site-info{
@@ -89,11 +89,17 @@
         width: 86% !important;
         left: 7% !important;
     }
+    .site-info-container{
+        width:calc(100% - 8% - 260px - 8%);
+    }
 }
 @media all and (min-width: 768px) and (max-width: 991.98px) {
     .content-item-clone-final{
         width: 80% !important;
         left: 10% !important;
+    }
+    .site-info-container{
+        width:calc(100% - 16% - 260px - 8%);
     }
 }
 @media all and (min-width: 992px) and (max-width: 1199.98px) {
@@ -101,10 +107,16 @@
         width: 70% !important;
         left: 15% !important;
     }
+    .site-info-container{
+        width:calc(100% - 16% - 260px - 8%);
+    }
 }
 @media all and (min-width: 1200px) {
     .content-item-clone-final{
         width: 70% !important;
         left: 15% !important;
+    }
+    .site-info-container{
+        width:calc(100% - 16% - 20% - 8%);
     }
 }

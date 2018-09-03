@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-grid.css">
     <link rel="stylesheet" href="css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <link href="https://fonts.googleapis.com/css?family=Gothic+A1:300,400,500,600|Roboto:300,400,500|Yantramanav:300,400,500" rel="stylesheet">
 
@@ -22,7 +23,18 @@
     <div class="container-fluid full-height">
         <div class="row" style="height:100%;">
             <div class="content-box text-center order-1 order-md-0" style="margin-left:8%;">
-                <div class="content-item"><div class='content-item-image' src="images/testimg.jpg"></div></div>
+                <div class="content-item">
+                    <div class='content-item-image'></div>
+                    <div class='content-item-tooltip text-center hidden'>
+                        <div style="display: table; height: 100%; width:100%;overflow: hidden;">
+                            <div style="display: table-cell; vertical-align: middle;">
+                                <div>
+                                    Click to view details
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="content-item"></div>
                 <div class="content-item"></div>
                 <div class="content-item"></div>
@@ -38,6 +50,24 @@
                     <a class="site-nav" href="Resume/">Resume</a>
                     <a class="site-nav" href="Contact/">Contact</a>
                     <div class="mt-1">This is where I put the things I make</div>
+
+                    <div id="display-info" class="display-info hidden">
+                        <hr style="margin-top:25px; margin-bottom:25px;"/>
+                        <h1 class="display-info-title">Interactive Statistics <span class="mr-2"></span><span class="small">Click image to view details</span></h1>
+                        <p class="mt-1">A series of 10 statistics interactives I created for the statistics department of Oregon State University.</p>
+                        <table class="mt-3 mb-0 display-info-concepts">
+                            <tr style="vertical-align:unset;">
+                                <td><strong><span>-</span>Concepts: </strong></td>
+                                <td class="pl-2">Statistics, Data Visualization, User Interaction</td>
+                            </tr>
+                        </table>
+                        <table class="mt-0 mb-0 display-info-concepts">
+                            <tr style="vertical-align:unset;">
+                                <td><strong><span>-</span>Tech: </strong></td>
+                                <td class="pl-2">R, Shiny, HTML/CSS/JS</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
