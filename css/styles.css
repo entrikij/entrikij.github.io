@@ -17,6 +17,13 @@ h1{
     font-size:1.3rem;
 }
 
+h2{
+    font-family: 'Gothic A1', sans-serif;
+    font-weight:500;
+    font-size:1rem;
+    margin-bottom:0;
+}
+
 .small{
     position:relative;
     display:inline-block;
@@ -67,6 +74,13 @@ h1{
     -webkit-transition: width .2s .3s ease-out, height .2s .3s ease-out; /* For Safari 3.1 to 6.0 */
     transition: width .2s .3s ease-out, height .2s .3s ease-out;
     font-size:1rem;
+}
+
+.content-item-title{
+    font-size:1rem;
+    text-align:left;
+    display:none;
+    position:relative;
 }
 
 .content-item-image{
@@ -123,7 +137,7 @@ h1{
 }
 
 .display-info{
-
+    display:block;
 }
 
 .display-info-concepts, .display-info-tech{
